@@ -16,13 +16,12 @@
 		B04467852656543D00DAD616 /* airbnbAppTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B04467842656543D00DAD616 /* airbnbAppTests.swift */; };
 		B04467902656543D00DAD616 /* airbnbAppUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = B044678F2656543D00DAD616 /* airbnbAppUITests.swift */; };
 		B04467A22656577900DAD616 /* Alamofire in Frameworks */ = {isa = PBXBuildFile; productRef = B04467A12656577900DAD616 /* Alamofire */; };
-		B04467A8265658AE00DAD616 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = B04467A7265658AE00DAD616 /* RxSwift */; };
-		B04467AA265658AE00DAD616 /* RxTest in Frameworks */ = {isa = PBXBuildFile; productRef = B04467A9265658AE00DAD616 /* RxTest */; };
-		B04467AC265658AE00DAD616 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = B04467AB265658AE00DAD616 /* RxRelay */; };
-		B04467AE265658AE00DAD616 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = B04467AD265658AE00DAD616 /* RxCocoa */; };
-		B04467B0265658AE00DAD616 /* RxBlocking in Frameworks */ = {isa = PBXBuildFile; productRef = B04467AF265658AE00DAD616 /* RxBlocking */; };
-		B04467BF2657817A00DAD616 /* EndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = B04467BE2657817A00DAD616 /* EndPoint.swift */; };
-		B04467C72657A3BE00DAD616 /* APIPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = B04467C62657A3BE00DAD616 /* APIPath.swift */; };
+		B04467D12657A9E400DAD616 /* EndPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = B04467D02657A9E400DAD616 /* EndPoint.swift */; };
+		B04467D92657AA0800DAD616 /* APIPath.swift in Sources */ = {isa = PBXBuildFile; fileRef = B04467D82657AA0800DAD616 /* APIPath.swift */; };
+		B04467F32657B19300DAD616 /* networkTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = B04467F22657B19300DAD616 /* networkTest.swift */; };
+		B0446815265B77A100DAD616 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = B0446814265B77A100DAD616 /* RxSwift */; };
+		B0446819265B77A100DAD616 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = B0446818265B77A100DAD616 /* RxRelay */; };
+		B044681B265B77A100DAD616 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = B044681A265B77A100DAD616 /* RxCocoa */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -57,8 +56,9 @@
 		B044678B2656543D00DAD616 /* airbnbAppUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = airbnbAppUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		B044678F2656543D00DAD616 /* airbnbAppUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = airbnbAppUITests.swift; sourceTree = "<group>"; };
 		B04467912656543D00DAD616 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		B04467BE2657817A00DAD616 /* EndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPoint.swift; sourceTree = "<group>"; };
-		B04467C62657A3BE00DAD616 /* APIPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIPath.swift; sourceTree = "<group>"; };
+		B04467D02657A9E400DAD616 /* EndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPoint.swift; sourceTree = "<group>"; };
+		B04467D82657AA0800DAD616 /* APIPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIPath.swift; sourceTree = "<group>"; };
+		B04467F22657B19300DAD616 /* networkTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = networkTest.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,11 +66,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				B04467A8265658AE00DAD616 /* RxSwift in Frameworks */,
-				B04467B0265658AE00DAD616 /* RxBlocking in Frameworks */,
-				B04467AA265658AE00DAD616 /* RxTest in Frameworks */,
-				B04467AE265658AE00DAD616 /* RxCocoa in Frameworks */,
-				B04467AC265658AE00DAD616 /* RxRelay in Frameworks */,
+				B0446815265B77A100DAD616 /* RxSwift in Frameworks */,
+				B044681B265B77A100DAD616 /* RxCocoa in Frameworks */,
+				B0446819265B77A100DAD616 /* RxRelay in Frameworks */,
 				B04467A22656577900DAD616 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -99,6 +97,7 @@
 				B04467832656543D00DAD616 /* airbnbAppTests */,
 				B044678E2656543D00DAD616 /* airbnbAppUITests */,
 				B044676B2656543A00DAD616 /* Products */,
+				B04467F7265B74C200DAD616 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -131,6 +130,7 @@
 			children = (
 				B04467842656543D00DAD616 /* airbnbAppTests.swift */,
 				B04467862656543D00DAD616 /* Info.plist */,
+				B04467F22657B19300DAD616 /* networkTest.swift */,
 			);
 			path = airbnbAppTests;
 			sourceTree = "<group>";
@@ -203,8 +203,8 @@
 		B04467BB2656659700DAD616 /* Network */ = {
 			isa = PBXGroup;
 			children = (
-				B04467BE2657817A00DAD616 /* EndPoint.swift */,
-				B04467C62657A3BE00DAD616 /* APIPath.swift */,
+				B04467D02657A9E400DAD616 /* EndPoint.swift */,
+				B04467D82657AA0800DAD616 /* APIPath.swift */,
 			);
 			path = Network;
 			sourceTree = "<group>";
@@ -226,6 +226,13 @@
 			path = View;
 			sourceTree = "<group>";
 		};
+		B04467F7265B74C200DAD616 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -244,11 +251,9 @@
 			name = airbnbApp;
 			packageProductDependencies = (
 				B04467A12656577900DAD616 /* Alamofire */,
-				B04467A7265658AE00DAD616 /* RxSwift */,
-				B04467A9265658AE00DAD616 /* RxTest */,
-				B04467AB265658AE00DAD616 /* RxRelay */,
-				B04467AD265658AE00DAD616 /* RxCocoa */,
-				B04467AF265658AE00DAD616 /* RxBlocking */,
+				B0446814265B77A100DAD616 /* RxSwift */,
+				B0446818265B77A100DAD616 /* RxRelay */,
+				B044681A265B77A100DAD616 /* RxCocoa */,
 			);
 			productName = airbnbApp;
 			productReference = B044676A2656543A00DAD616 /* airbnbApp.app */;
@@ -323,7 +328,7 @@
 			mainGroup = B04467612656543A00DAD616;
 			packageReferences = (
 				B04467A02656577900DAD616 /* XCRemoteSwiftPackageReference "Alamofire" */,
-				B04467A6265658AE00DAD616 /* XCRemoteSwiftPackageReference "RxSwift" */,
+				B0446813265B77A100DAD616 /* XCRemoteSwiftPackageReference "RxSwift" */,
 			);
 			productRefGroup = B044676B2656543A00DAD616 /* Products */;
 			projectDirPath = "";
@@ -368,10 +373,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B04467D12657A9E400DAD616 /* EndPoint.swift in Sources */,
+				B04467D92657AA0800DAD616 /* APIPath.swift in Sources */,
 				B04467722656543A00DAD616 /* ViewController.swift in Sources */,
-				B04467C72657A3BE00DAD616 /* APIPath.swift in Sources */,
 				B044676E2656543A00DAD616 /* AppDelegate.swift in Sources */,
-				B04467BF2657817A00DAD616 /* EndPoint.swift in Sources */,
 				B04467702656543A00DAD616 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -380,6 +385,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B04467F32657B19300DAD616 /* networkTest.swift in Sources */,
 				B04467852656543D00DAD616 /* airbnbAppTests.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -464,6 +470,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_TESTING_SEARCH_PATHS = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_DYNAMIC_NO_PIC = NO;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -525,6 +532,7 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTING_SEARCH_PATHS = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu11;
 				GCC_NO_COMMON_BLOCKS = YES;
 				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
@@ -715,7 +723,7 @@
 				minimumVersion = 5.4.3;
 			};
 		};
-		B04467A6265658AE00DAD616 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+		B0446813265B77A100DAD616 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/ReactiveX/RxSwift";
 			requirement = {
@@ -731,30 +739,20 @@
 			package = B04467A02656577900DAD616 /* XCRemoteSwiftPackageReference "Alamofire" */;
 			productName = Alamofire;
 		};
-		B04467A7265658AE00DAD616 /* RxSwift */ = {
+		B0446814265B77A100DAD616 /* RxSwift */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = B04467A6265658AE00DAD616 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			package = B0446813265B77A100DAD616 /* XCRemoteSwiftPackageReference "RxSwift" */;
 			productName = RxSwift;
 		};
-		B04467A9265658AE00DAD616 /* RxTest */ = {
+		B0446818265B77A100DAD616 /* RxRelay */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = B04467A6265658AE00DAD616 /* XCRemoteSwiftPackageReference "RxSwift" */;
-			productName = RxTest;
-		};
-		B04467AB265658AE00DAD616 /* RxRelay */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = B04467A6265658AE00DAD616 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			package = B0446813265B77A100DAD616 /* XCRemoteSwiftPackageReference "RxSwift" */;
 			productName = RxRelay;
 		};
-		B04467AD265658AE00DAD616 /* RxCocoa */ = {
+		B044681A265B77A100DAD616 /* RxCocoa */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = B04467A6265658AE00DAD616 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			package = B0446813265B77A100DAD616 /* XCRemoteSwiftPackageReference "RxSwift" */;
 			productName = RxCocoa;
-		};
-		B04467AF265658AE00DAD616 /* RxBlocking */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = B04467A6265658AE00DAD616 /* XCRemoteSwiftPackageReference "RxSwift" */;
-			productName = RxBlocking;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
