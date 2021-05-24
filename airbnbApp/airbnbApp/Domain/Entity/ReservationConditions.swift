@@ -7,11 +7,11 @@
 
 import Foundation
 
-class ReservationConditions {
+class ReservationConditions: Codable {
     let location: String
-    let checkIn: String?
-    let checkOut: String?
-    let minPrice: Int?
-    let maxPrice: Int?
-    let personnel: Int? // only guest, 영아 미포함.
+    var checkIn: String?
+    var checkOut: String?
+    var minPrice: Int?
+    var maxPrice: Int?
+    var personnel: Int? // only guest, 영아 미포함.
 }

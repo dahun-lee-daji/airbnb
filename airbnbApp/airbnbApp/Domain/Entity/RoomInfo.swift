@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct RoomInfo {
+struct RoomInfo: Codable {
     let roomid : Int
     let image : [String]
     let grade : Float // 실수형

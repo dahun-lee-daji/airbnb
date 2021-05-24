@@ -7,7 +7,7 @@
 
 import Foundation
 
-struct NearDestination {
+struct NearDestination: Codable {
     private let image : String
     private let destination : String
     private let timeDistance : String
