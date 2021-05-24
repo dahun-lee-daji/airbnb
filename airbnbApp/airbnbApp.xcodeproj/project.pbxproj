@@ -22,6 +22,11 @@
 		B0446815265B77A100DAD616 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = B0446814265B77A100DAD616 /* RxSwift */; };
 		B0446819265B77A100DAD616 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = B0446818265B77A100DAD616 /* RxRelay */; };
 		B044681B265B77A100DAD616 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = B044681A265B77A100DAD616 /* RxCocoa */; };
+		B0446825265B7C8B00DAD616 /* HeroBanner.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0446824265B7C8B00DAD616 /* HeroBanner.swift */; };
+		B044682A265B7CC400DAD616 /* NearDestination.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0446829265B7CC400DAD616 /* NearDestination.swift */; };
+		B044682F265B7D9D00DAD616 /* ReservationConditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B044682E265B7D9D00DAD616 /* ReservationConditions.swift */; };
+		B0446834265B7EC500DAD616 /* RoomInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0446833265B7EC500DAD616 /* RoomInfo.swift */; };
+		B0446839265B80BC00DAD616 /* dummy.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0446838265B80BC00DAD616 /* dummy.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -59,6 +64,11 @@
 		B04467D02657A9E400DAD616 /* EndPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = EndPoint.swift; sourceTree = "<group>"; };
 		B04467D82657AA0800DAD616 /* APIPath.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIPath.swift; sourceTree = "<group>"; };
 		B04467F22657B19300DAD616 /* networkTest.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = networkTest.swift; sourceTree = "<group>"; };
+		B0446824265B7C8B00DAD616 /* HeroBanner.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HeroBanner.swift; sourceTree = "<group>"; };
+		B0446829265B7CC400DAD616 /* NearDestination.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NearDestination.swift; sourceTree = "<group>"; };
+		B044682E265B7D9D00DAD616 /* ReservationConditions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationConditions.swift; sourceTree = "<group>"; };
+		B0446833265B7EC500DAD616 /* RoomInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomInfo.swift; sourceTree = "<group>"; };
+		B0446838265B80BC00DAD616 /* dummy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dummy.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -156,6 +166,10 @@
 		B04467B52656654F00DAD616 /* Entity */ = {
 			isa = PBXGroup;
 			children = (
+				B0446824265B7C8B00DAD616 /* HeroBanner.swift */,
+				B0446829265B7CC400DAD616 /* NearDestination.swift */,
+				B044682E265B7D9D00DAD616 /* ReservationConditions.swift */,
+				B0446833265B7EC500DAD616 /* RoomInfo.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -163,6 +177,7 @@
 		B04467B62656655700DAD616 /* UseCase */ = {
 			isa = PBXGroup;
 			children = (
+				B0446838265B80BC00DAD616 /* dummy.swift */,
 			);
 			path = UseCase;
 			sourceTree = "<group>";
@@ -375,9 +390,14 @@
 			files = (
 				B04467D12657A9E400DAD616 /* EndPoint.swift in Sources */,
 				B04467D92657AA0800DAD616 /* APIPath.swift in Sources */,
+				B044682F265B7D9D00DAD616 /* ReservationConditions.swift in Sources */,
 				B04467722656543A00DAD616 /* ViewController.swift in Sources */,
 				B044676E2656543A00DAD616 /* AppDelegate.swift in Sources */,
 				B04467702656543A00DAD616 /* SceneDelegate.swift in Sources */,
+				B0446839265B80BC00DAD616 /* dummy.swift in Sources */,
+				B044682A265B7CC400DAD616 /* NearDestination.swift in Sources */,
+				B0446834265B7EC500DAD616 /* RoomInfo.swift in Sources */,
+				B0446825265B7C8B00DAD616 /* HeroBanner.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
