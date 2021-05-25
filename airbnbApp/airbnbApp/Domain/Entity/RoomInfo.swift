@@ -22,7 +22,7 @@ struct RoomInfo: Codable {
     let description : String
 }
 
-struct Host{
+struct Host: Codable {
     let name : String
     let profileImage : String
 }
