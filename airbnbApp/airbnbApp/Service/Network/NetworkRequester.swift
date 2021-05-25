@@ -30,6 +30,8 @@ class NetworkRequester {
                         let model : T = try JSONDecoder().decode(T.self, from: data)
                         observer.onNext(model)
                     } catch {
+                        print(error.localizedDescription)
+                        print(url)
                         assertionFailure("\(NetworkErrors.decodingError)")
                     }
                 case .failure(let error):

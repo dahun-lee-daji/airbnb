@@ -12,9 +12,9 @@ struct APIPath {
     private let roomId : Int?
     private let userId : Int?
     private let bookingId : Int?
-    private let location : Int?
+    private let location : String?
     
-    init(roomId: Int? = nil, userId: Int? = nil, bookingId: Int? = nil, location: Int? = nil) {
+    init(roomId: Int? = nil, userId: Int? = nil, bookingId: Int? = nil, location: String? = nil) {
         self.roomId = roomId
         self.userId = userId
         self.bookingId = bookingId
@@ -40,7 +40,7 @@ struct APIPath {
         guard roomId != nil else {
             return ""
         }
-        return "/rooms/\(roomId)"
+        return "/rooms/\(roomId!)"
     }
     
     func getRoomPriceForPopUp() -> String {
@@ -61,14 +61,14 @@ struct APIPath {
         guard userId != nil else {
             return ""
         }
-        return "/bookings/\(userId)"
+        return "/bookings/\(userId!)"
     }
     
     func getBooking() -> String {
         guard bookingId != nil else {
             return ""
         }
-        return "/booking/\(bookingId)/\(userId)"
+        return "/bookings/\(bookingId!)/\(userId!)"
     }
     
     func deleteBooking() -> String {
@@ -82,7 +82,7 @@ struct APIPath {
         guard userId != nil else {
             return ""
         }
-        return "wishlist/\(userId)"
+        return "wishlist/\(userId!)"
         
     }
 }
