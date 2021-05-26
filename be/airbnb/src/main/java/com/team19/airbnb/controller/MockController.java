@@ -4,6 +4,8 @@ import com.team19.airbnb.dto.*;
 import org.springframework.web.bind.annotation.*;
 import org.springframework.web.bind.annotation.RestController;
 
+import java.math.BigDecimal;
+import java.time.LocalDate;
 import java.util.ArrayList;
 import java.util.Arrays;
 import java.util.List;
@@ -31,12 +33,26 @@ public class MockController {
     }
 
     @GetMapping("/search")
-    public List<RoomDetailResponseDTO> searchRoomsByCondition(@ModelAttribute SearchRequestDTO searchRequestDTO) {
+    public List<RoomDetailResponseDTO> searchRoomsByCondition(@RequestParam(value = "location") String location,
+                                                              @RequestParam(value = "checkIn") String checkIn,
+                                                              @RequestParam(value = "checkOut") String checkOut,
+                                                              @RequestParam(value = "minPrice") BigDecimal minPrice,
+                                                              @RequestParam(value = "maxPrice") BigDecimal maxPrice,
+                                                              @RequestParam(value = "guest") String guest) {
+        System.out.println(location);
+        System.out.println(checkIn);
+        System.out.println(checkOut);
+        System.out.println(minPrice);
+        System.out.println(maxPrice);
+        System.out.println(guest);
+
+
+
         List<RoomDetailResponseDTO> searchResponseDTOS = new ArrayList<>();
         String[] images = {"img1", "img2"};
         searchResponseDTOS.add(new RoomDetailResponseDTO(1L, "firstRoom", images, 4.5f, 5, "서울시 양재",
                 10000, 30000, "one room", new Host("Tree", "treeImg"), "one bed, no bathroom", "It is for test"));
-         searchResponseDTOS.add(new RoomDetailResponseDTO(2L, "secondRoom", images, 3.5f, 10, "서울시 청담",
+        searchResponseDTOS.add(new RoomDetailResponseDTO(2L, "secondRoom", images, 3.5f, 10, "서울시 청담",
                 10000, 30000, "one room", new Host("Tree", "treeImg"), "no bed, no bathroom", "It is for test"));
         return searchResponseDTOS;
     }
@@ -50,7 +66,14 @@ public class MockController {
     }
 
     @GetMapping("/rooms/{roomId}/price")
-    public RoomPriceResponseDTO detailRoomPopup(@ModelAttribute RoomPriceRequestDTO roomPriceRequestDTO) {
+    public RoomPriceResponseDTO detailRoomPopup(@PathVariable Long roomId,
+                                                @RequestParam String checkIn,
+                                                @RequestParam String checkOut,
+                                                @RequestParam Integer guest) {
+        System.out.println("roomId = " + roomId);
+        System.out.println("roomId = " + checkIn);
+        System.out.println("roomId = " + checkOut);
+        System.out.println("roomId = " + guest);
         return new RoomPriceResponseDTO(5000, 3500, 12000, 7000, 50000);
     }
 

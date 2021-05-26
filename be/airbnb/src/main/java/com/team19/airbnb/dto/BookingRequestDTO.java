@@ -8,6 +8,9 @@ public class BookingRequestDTO {
     private int guest;
     private int totalPrice;
 
+    public BookingRequestDTO() {
+    }
+
     public BookingRequestDTO(int roomId, String checkIn, String checkOut, int guest, int totalPrice) {
         this.roomId = roomId;
         this.checkIn = checkIn;

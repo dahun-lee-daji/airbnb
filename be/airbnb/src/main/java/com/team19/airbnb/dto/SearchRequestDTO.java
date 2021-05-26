@@ -12,7 +12,7 @@ public class SearchRequestDTO {
         this.checkIn = checkIn;
         this.checkOut = checkOut;
         this.priceRange = priceRange;
-        this.guest = guest;
+
     }
 
     public void setLocation(String location) {
