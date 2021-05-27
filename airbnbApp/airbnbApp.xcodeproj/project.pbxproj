@@ -29,6 +29,7 @@
 		B0446839265B80BC00DAD616 /* dummy.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0446838265B80BC00DAD616 /* dummy.swift */; };
 		B044683E265CCADF00DAD616 /* NetworkRequester.swift in Sources */ = {isa = PBXBuildFile; fileRef = B044683D265CCADE00DAD616 /* NetworkRequester.swift */; };
 		B0446846265CDE0000DAD616 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0446845265CDE0000DAD616 /* NetworkService.swift */; };
+		B0446854265F68CC00DAD616 /* BookingPriceInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0446853265F68CB00DAD616 /* BookingPriceInfo.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +74,7 @@
 		B0446838265B80BC00DAD616 /* dummy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dummy.swift; sourceTree = "<group>"; };
 		B044683D265CCADE00DAD616 /* NetworkRequester.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequester.swift; sourceTree = "<group>"; };
 		B0446845265CDE0000DAD616 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
+		B0446853265F68CB00DAD616 /* BookingPriceInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingPriceInfo.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -174,6 +176,7 @@
 				B044682E265B7D9D00DAD616 /* ReservationConditions.swift */,
 				B0446833265B7EC500DAD616 /* RoomInfo.swift */,
 				A0C9CC69265CF4E0000CA89D /* BookingInfo.swift */,
+				B0446853265F68CB00DAD616 /* BookingPriceInfo.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -404,6 +407,7 @@
 				B04467702656543A00DAD616 /* SceneDelegate.swift in Sources */,
 				B0446839265B80BC00DAD616 /* dummy.swift in Sources */,
 				B0446834265B7EC500DAD616 /* RoomInfo.swift in Sources */,
+				B0446854265F68CC00DAD616 /* BookingPriceInfo.swift in Sources */,
 				B0446846265CDE0000DAD616 /* NetworkService.swift in Sources */,
 				B0446825265B7C8B00DAD616 /* MainViewSource.swift in Sources */,
 			);

@@ -15,73 +15,68 @@ class NetworkService {
     
     func getMain() -> Observable<MainViewSource> {
         
-        let header = HTTPHeaders.init(["Content-Type":"application/json"])
-        
         let endPoint = EndPoint.init(method: .get, path: APIPath().getMain())
         
-        return networkRequester.get(endPoint: endPoint, header: header)
+        return networkRequester.get(endPoint: endPoint)
     }
     
     func getSearchPriceResult() -> Observable<[Int]> {
         
-        let header = HTTPHeaders.init(["Content-Type":"application/json"])
-        
         let endPoint = EndPoint.init(method: .get, path: APIPath(location: "seoul").getRegionalPriceForGraph())
         
-        return networkRequester.get(endPoint: endPoint, header: header)
+        return networkRequester.get(endPoint: endPoint)
     }
     
-    func getSearch() -> Observable<RoomInfo> {
-        
-        let header = HTTPHeaders.init(["Content-Type":"application/json"])
+    func getSearch(conditions: ReservationConditions) -> Observable<[RoomInfo]> {
         
         let endPoint = EndPoint.init(method: .get, path: APIPath().getSearchResult())
-        
-        return networkRequester.get(endPoint: endPoint, header: header)
+        let param = ["location":conditions.location,
+                     "checkIn":conditions.checkIn!,
+                     "checkOut":conditions.checkOut!,
+                     "minPrice":conditions.minPrice!,
+                     "maxPrice":conditions.maxPrice!,
+                     "guest":conditions.personnel!
+        ] as [String : Codable]
+        return networkRequester.get(endPoint: endPoint, parameters: param)
     }
     
     func getRoom() -> Observable<RoomInfo> {
         
-        let header = HTTPHeaders.init(["Content-Type":"application/json"])
-        
         let endPoint = EndPoint.init(method: .get, path: APIPath(roomId: 1).getRoom())
         
-        return networkRequester.get(endPoint: endPoint, header: header)
+        return networkRequester.get(endPoint: endPoint)
     }
     
-    func getRoomPrice() -> Observable<RoomInfo> {
-        
-        let header = HTTPHeaders.init(["Content-Type":"application/json"])
+    func getRoomPrice(conditions: ReservationConditions) -> Observable<BookingPriceInfo> {
         
         let endPoint = EndPoint.init(method: .get, path: APIPath(roomId: 1).getRoomPriceForPopUp())
         
-        return networkRequester.get(endPoint: endPoint, header: header)
+        let param = ["checkIn":conditions.checkIn!,
+                     "checkOut":conditions.checkOut!,
+                     "guest":conditions.personnel!
+        ] as [String : Codable]
+        
+        return networkRequester.get(endPoint: endPoint, parameters: param)
     }
     
     func getBookings() -> Observable<[BookingInfo]> {
         
-        let header = HTTPHeaders.init(["Content-Type":"application/json"])
-        
         let endPoint = EndPoint.init(method: .get, path: APIPath(userId: 1).getBookings())
         
-        return networkRequester.get(endPoint: endPoint, header: header)
+        return networkRequester.get(endPoint: endPoint)
     }
     
     func getBooking() -> Observable<BookingInfo> {
         
-        let header = HTTPHeaders.init(["Content-Type":"application/json"])
-        
         let endPoint = EndPoint.init(method: .get, path: APIPath(userId: 1, bookingId: 1).getBooking())
         
-        return networkRequester.get(endPoint: endPoint, header: header)
+        return networkRequester.get(endPoint: endPoint)
     }
     
     func getWishlist() -> Observable<[RoomInfo]> {
         
-        let header = HTTPHeaders.init(["Content-Type":"application/json"])
-        
         let endPoint = EndPoint.init(method: .get, path: APIPath(userId: 1).wishListAPI())
         
-        return networkRequester.get(endPoint: endPoint, header: header)
+        return networkRequester.get(endPoint: endPoint)
     }
 }

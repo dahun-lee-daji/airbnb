@@ -14,4 +14,13 @@ class ReservationConditions: Codable {
     var minPrice: Int?
     var maxPrice: Int?
     var personnel: Int? // only guest, 영아 미포함.
+    
+    init(location: String, checkIn: String? = nil, checkOut: String? = nil, minPrice : Int? = nil, maxPrice : Int? = nil, personnel : Int? = nil) {
+        self.location = location
+        self.checkIn = checkIn
+        self.checkOut = checkOut
+        self.minPrice = minPrice
+        self.maxPrice = maxPrice
+        self.personnel = personnel
+    }
 }

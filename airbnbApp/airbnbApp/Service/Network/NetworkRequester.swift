@@ -16,24 +16,17 @@ enum NetworkErrors : Error {
 
 class NetworkRequester {
     
-    func get<T: Codable>(endPoint: EndPoint, header:  HTTPHeaders, parameters: [String: Codable]? = nil) -> Observable<T> {
+    func get<T: Codable>(endPoint: EndPoint, parameters: [String: Codable]? = nil) -> Observable<T> {
         
         let url = endPoint.urlFromEndPoint()
+        print(url)
         return Observable<T>.create({ observer in
+            let dataRequest = AF.request(url, method: endPoint.method, parameters: parameters, encoding: URLEncoding.queryString)
             
-            let dataRequest = AF.request(url, method: endPoint.method, parameters: parameters, encoding: JSONEncoding.default, headers: header)
-            
-            dataRequest.responseData(completionHandler: { response in
+            dataRequest.responseDecodable(of: T.self, completionHandler: { (response) in
                 switch response.result {
                 case .success(let data):
-                    do {
-                        let model : T = try JSONDecoder().decode(T.self, from: data)
-                        observer.onNext(model)
-                    } catch {
-                        print(error.localizedDescription)
-                        print(url)
-                        assertionFailure("\(NetworkErrors.decodingError)")
-                    }
+                    observer.onNext(data)
                 case .failure(let error):
                     observer.onError(error)
                 }

@@ -8,8 +8,8 @@
 import Foundation
 
 struct MainViewSource: Codable {
-    let hero_banners: [HeroBanner]
-    let near_destinations: [NearDestination]
+    let heroBanners: [HeroBanner]
+    let nearDestinations: [NearDestination]
 }
 
 struct HeroBanner: Codable {
@@ -20,5 +20,5 @@ struct HeroBanner: Codable {
 struct NearDestination: Codable {
     private let image : String
     private let destination : String
-    private let time_distance : Float
+    private let timeDistance : String
 }

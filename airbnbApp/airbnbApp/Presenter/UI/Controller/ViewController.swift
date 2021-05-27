@@ -19,7 +19,7 @@ class ViewController: UIViewController {
 //        getSearchPriceResultTest() // Test Success
 //        getSearchTest() // Body
 //        getRoomTest() // Test Success
-//        getRoomPriceTest() // Body
+        getRoomPriceTest() // Body
 //        getBookingsTest() // Test Success
 //        getBookingTest() // Test Success
 //        getWishlistTest() // Fatal error: The operation couldn’t be completed
@@ -29,8 +29,8 @@ class ViewController: UIViewController {
         networkService.getMain()
             .subscribe(
                 onNext: { data in
-                    print("banner: \(data.hero_banners)")
-                    print("destination: \(data.near_destinations)")
+                    print("banner: \(data.heroBanners)")
+                    print("destination: \(data.nearDestinations)")
                 },
                 onError: { error in
                     print("onError: \(error)")
@@ -59,10 +59,11 @@ class ViewController: UIViewController {
     }
 
     func getSearchTest() {
-        networkService.getSearch()
+        let reservationConfition = ReservationConditions.init(location: "seoul", checkIn: "2020-05-20", checkOut: "2020-05-30", minPrice: 10000, maxPrice: 10000000, personnel: 1)
+        networkService.getSearch(conditions: reservationConfition)
             .subscribe(
                 onNext: { data in
-                    print("ArrayCount: \(data.location)")
+                    print("ArrayCount: \(data.first?.location)")
                 },
                 onError: { error in
                     print("onError: \(error)")
@@ -91,10 +92,15 @@ class ViewController: UIViewController {
     }
     
     func getRoomPriceTest() {
-        networkService.getRoomPrice()
+        let reservationConfition = ReservationConditions.init(location: "seoul", checkIn: "2020-05-20", checkOut: "2020-05-30", minPrice: 10000, maxPrice: 10000000, personnel: 1)
+        networkService.getRoomPrice(conditions: reservationConfition)
             .subscribe(
                 onNext: { data in
-                    print("ArrayCount: \(data.location)")
+                    print("cleaningFee: \(data.cleaningFee)")
+                    print("discountPerWeek: \(data.discountPerWeek)")
+                    print("serviceFee: \(data.serviceFee)")
+                    print("tax: \(data.tax)")
+                    print("tax: \(data.totalPrice)")
                 },
                 onError: { error in
                     print("onError: \(error)")

@@ -24,7 +24,6 @@ struct EndPoint: URLConvertible {
         component.host = "52.78.20.134"
         component.port = 8080
         component.path = path
-        
         guard component.url != nil else {
             throw NetworkErrors.invalidURL
         }

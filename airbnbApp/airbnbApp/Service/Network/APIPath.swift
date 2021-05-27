@@ -47,14 +47,14 @@ struct APIPath {
         guard roomId != nil else {
             return ""
         }
-        return "/rooms/\(roomId)/price"
+        return "/rooms/\(roomId!)/price"
     }
     
     func postBooking() -> String {
         guard roomId != nil else {
             return ""
         }
-        return "/bookings/\(roomId)"
+        return "/bookings/\(roomId!)"
     }
     
     func getBookings() -> String {
@@ -75,14 +75,14 @@ struct APIPath {
         guard bookingId != nil else {
             return ""
         }
-        return "booking/\(bookingId)/\(userId)"
+        return "/booking/\(bookingId!)/\(userId!)"
     }
     
     func wishListAPI() -> String {
         guard userId != nil else {
             return ""
         }
-        return "wishlist/\(userId!)"
+        return "/wishlist/\(userId!)"
         
     }
 }
