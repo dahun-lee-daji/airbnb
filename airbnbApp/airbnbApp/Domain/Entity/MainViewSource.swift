@@ -10,11 +10,16 @@ import Foundation
 struct MainViewSource: Codable {
     let heroBanners: [HeroBanner]
     let nearDestinations: [NearDestination]
+    
+    init() {
+        self.heroBanners = []
+        self.nearDestinations = []
+    }
 }
 
 struct HeroBanner: Codable {
-    private let image : String
-    private let title : String
+    let image : String
+    let title : String
 }
 
 struct NearDestination: Codable {

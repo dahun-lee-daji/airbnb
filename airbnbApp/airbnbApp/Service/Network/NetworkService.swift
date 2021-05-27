@@ -11,6 +11,10 @@ import Alamofire
 
 class NetworkService {
     
+    static let shared = NetworkService()
+    
+    private init() {}
+    
     let networkRequester = NetworkRequester()
     
     func getMain() -> Observable<MainViewSource> {

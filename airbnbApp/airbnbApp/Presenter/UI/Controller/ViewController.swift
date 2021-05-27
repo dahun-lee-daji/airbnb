@@ -7,41 +7,29 @@
 
 import UIKit
 import RxSwift
+import RxCocoa
+import RxDataSources
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var mainHeroImage: UIImageView!
+    
+    let viewModel = MainViewModel()
     let disposeBag = DisposeBag()
-    let networkService = NetworkService()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-//        getMainTest() // Test Success
-//        getSearchPriceResultTest() // Test Success
-//        getSearchTest() // Body
-//        getRoomTest() // Test Success
-        getRoomPriceTest() // Body
-//        getBookingsTest() // Test Success
-//        getBookingTest() // Test Success
-//        getWishlistTest() // Fatal error: The operation couldn’t be completed
     }
     
-    func getMainTest() {
-        networkService.getMain()
-            .subscribe(
-                onNext: { data in
-                    print("banner: \(data.heroBanners)")
-                    print("destination: \(data.nearDestinations)")
-                },
-                onError: { error in
-                    print("onError: \(error)")
-                },
-                onCompleted: {
-                    print("onCompleted")
-                }
-            )
-            .disposed(by: disposeBag)
+    private func bind() {
+        viewModel.mainHeroSection
+            .map({$0.first?.image})
+            .observe(on: MainScheduler.instance)
+            .bind(to: mainHeroImage.rx.image)
+            
     }
     
+    /*
     func getSearchPriceResultTest() {
         networkService.getSearchPriceResult()
             .subscribe(
@@ -159,5 +147,6 @@ class ViewController: UIViewController {
             )
             .disposed(by: disposeBag)
     }
+ */
 }
 

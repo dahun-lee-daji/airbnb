@@ -26,10 +26,12 @@
 		B0446825265B7C8B00DAD616 /* MainViewSource.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0446824265B7C8B00DAD616 /* MainViewSource.swift */; };
 		B044682F265B7D9D00DAD616 /* ReservationConditions.swift in Sources */ = {isa = PBXBuildFile; fileRef = B044682E265B7D9D00DAD616 /* ReservationConditions.swift */; };
 		B0446834265B7EC500DAD616 /* RoomInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0446833265B7EC500DAD616 /* RoomInfo.swift */; };
-		B0446839265B80BC00DAD616 /* dummy.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0446838265B80BC00DAD616 /* dummy.swift */; };
 		B044683E265CCADF00DAD616 /* NetworkRequester.swift in Sources */ = {isa = PBXBuildFile; fileRef = B044683D265CCADE00DAD616 /* NetworkRequester.swift */; };
 		B0446846265CDE0000DAD616 /* NetworkService.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0446845265CDE0000DAD616 /* NetworkService.swift */; };
 		B0446854265F68CC00DAD616 /* BookingPriceInfo.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0446853265F68CB00DAD616 /* BookingPriceInfo.swift */; };
+		B044685F265F8E2600DAD616 /* MainViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = B044685E265F8E2400DAD616 /* MainViewModel.swift */; };
+		B0446864265F8E4500DAD616 /* MainViewUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = B0446863265F8E4400DAD616 /* MainViewUseCase.swift */; };
+		B044686D265F8FAE00DAD616 /* RxDataSources in Frameworks */ = {isa = PBXBuildFile; productRef = B044686C265F8FAE00DAD616 /* RxDataSources */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -71,10 +73,11 @@
 		B0446824265B7C8B00DAD616 /* MainViewSource.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewSource.swift; sourceTree = "<group>"; };
 		B044682E265B7D9D00DAD616 /* ReservationConditions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ReservationConditions.swift; sourceTree = "<group>"; };
 		B0446833265B7EC500DAD616 /* RoomInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RoomInfo.swift; sourceTree = "<group>"; };
-		B0446838265B80BC00DAD616 /* dummy.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = dummy.swift; sourceTree = "<group>"; };
 		B044683D265CCADE00DAD616 /* NetworkRequester.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkRequester.swift; sourceTree = "<group>"; };
 		B0446845265CDE0000DAD616 /* NetworkService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NetworkService.swift; sourceTree = "<group>"; };
 		B0446853265F68CB00DAD616 /* BookingPriceInfo.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookingPriceInfo.swift; sourceTree = "<group>"; };
+		B044685E265F8E2400DAD616 /* MainViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewModel.swift; sourceTree = "<group>"; };
+		B0446863265F8E4400DAD616 /* MainViewUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewUseCase.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -85,6 +88,7 @@
 				B0446815265B77A100DAD616 /* RxSwift in Frameworks */,
 				B044681B265B77A100DAD616 /* RxCocoa in Frameworks */,
 				B0446819265B77A100DAD616 /* RxRelay in Frameworks */,
+				B044686D265F8FAE00DAD616 /* RxDataSources in Frameworks */,
 				B04467A22656577900DAD616 /* Alamofire in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -184,7 +188,7 @@
 		B04467B62656655700DAD616 /* UseCase */ = {
 			isa = PBXGroup;
 			children = (
-				B0446838265B80BC00DAD616 /* dummy.swift */,
+				B0446863265F8E4400DAD616 /* MainViewUseCase.swift */,
 			);
 			path = UseCase;
 			sourceTree = "<group>";
@@ -210,6 +214,7 @@
 		B04467B92656657F00DAD616 /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				B044685E265F8E2400DAD616 /* MainViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -278,6 +283,7 @@
 				B0446814265B77A100DAD616 /* RxSwift */,
 				B0446818265B77A100DAD616 /* RxRelay */,
 				B044681A265B77A100DAD616 /* RxCocoa */,
+				B044686C265F8FAE00DAD616 /* RxDataSources */,
 			);
 			productName = airbnbApp;
 			productReference = B044676A2656543A00DAD616 /* airbnbApp.app */;
@@ -353,6 +359,7 @@
 			packageReferences = (
 				B04467A02656577900DAD616 /* XCRemoteSwiftPackageReference "Alamofire" */,
 				B0446813265B77A100DAD616 /* XCRemoteSwiftPackageReference "RxSwift" */,
+				B044686B265F8FAE00DAD616 /* XCRemoteSwiftPackageReference "RxDataSources" */,
 			);
 			productRefGroup = B044676B2656543A00DAD616 /* Products */;
 			projectDirPath = "";
@@ -403,9 +410,10 @@
 				B044682F265B7D9D00DAD616 /* ReservationConditions.swift in Sources */,
 				B04467722656543A00DAD616 /* ViewController.swift in Sources */,
 				A0C9CC6A265CF4E0000CA89D /* BookingInfo.swift in Sources */,
+				B0446864265F8E4500DAD616 /* MainViewUseCase.swift in Sources */,
 				B044676E2656543A00DAD616 /* AppDelegate.swift in Sources */,
+				B044685F265F8E2600DAD616 /* MainViewModel.swift in Sources */,
 				B04467702656543A00DAD616 /* SceneDelegate.swift in Sources */,
-				B0446839265B80BC00DAD616 /* dummy.swift in Sources */,
 				B0446834265B7EC500DAD616 /* RoomInfo.swift in Sources */,
 				B0446854265F68CC00DAD616 /* BookingPriceInfo.swift in Sources */,
 				B0446846265CDE0000DAD616 /* NetworkService.swift in Sources */,
@@ -763,6 +771,14 @@
 				minimumVersion = 6.2.0;
 			};
 		};
+		B044686B265F8FAE00DAD616 /* XCRemoteSwiftPackageReference "RxDataSources" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/RxSwiftCommunity/RxDataSources";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.0.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -785,6 +801,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = B0446813265B77A100DAD616 /* XCRemoteSwiftPackageReference "RxSwift" */;
 			productName = RxCocoa;
+		};
+		B044686C265F8FAE00DAD616 /* RxDataSources */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = B044686B265F8FAE00DAD616 /* XCRemoteSwiftPackageReference "RxDataSources" */;
+			productName = RxDataSources;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
